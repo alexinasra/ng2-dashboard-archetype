@@ -1,0 +1,32 @@
+<nav id="dashboard-navbar" class="navbar fixed-top navbar-dark bg-faded d-flex flex-row align-items-center justify-content-start">
+
+  <a class="navbar-brand p-2" routerLink="/dashboard">
+      <img src="/assets/ui/logo.png" height="32"/>
+  </a>
+  <span *ngIf="showTitle && title" class="navbar-text p-2">
+    <h3>{{title}}</h3>
+  </span>
+  <ul class="navbar-nav ml-auto p-2 nav d-flex flex-row align-items-center justify-content-start ">
+    <li  class="nav-item dropdown d-inline-block" ngbDropdown #myDrop1="ngbDropdown">
+      <a  class="nav-link dropdown-toggle" ngbDropdownToggle id="dropdownMenu1">
+        <i class="app-icon">message</i>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+        <div class="dropdown-item">
+          <p>no messeges .</p>
+        </div>
+      </div>
+    </li>
+    <li  class="nav-item dropdown d-inline-block" ngbDropdown  #myDrop2="ngbDropdown">
+      <a class="nav-link" ngbDropdownToggle id="dropdownMenu2">
+        <i class="app-icon">notifications</i>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+        <div class="dropdown-item">
+          <p>no notifications .</p>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+</nav>

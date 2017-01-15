@@ -1,0 +1,60 @@
+@import "src/scss-include/variables";
+@import "src/scss-include/bootstrap/mixins";
+
+:host-context #dashboard-side-nav {
+  @include ltr{
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+    left: 0;
+  }
+  @include rtl{
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+    right:0;
+  }
+}
+
+#dashboard-side-nav {
+
+  background: $gray-lightest;
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=1 ); /* IE6-9 */
+  width: 250px;
+  padding: 0 10px;
+  position: fixed;
+  top:90px;
+  bottom: 10px;
+  .profile {
+    //width: 200px;
+    padding: 0 5px;
+    .profile-pic{
+      -webkit-box-shadow: 0px 0px 10px 3px rgba(214,214,214,1);
+      -moz-box-shadow: 0px 0px 10px 3px rgba(214,214,214,1);
+      box-shadow: 0px 0px 10px 3px rgba(214,214,214,1);
+      border: 1px solid;
+      border-radius: 50%;
+      box-shadow: 0 0 0.5;
+      width: 64px;
+      img {
+        width: 64px;
+        height: 64px;
+      }
+      .profile-title {
+
+      }
+      .profile-details {
+
+      }
+    }
+  }
+  .navigations {
+    background: $gray-lighter;
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(214,214,214,1);
+    -moz-box-shadow: 0px 0px 10px 3px rgba(214,214,214,1);
+    box-shadow: 0px 0px 10px 3px rgba(214,214,214,1);
+  }
+}

@@ -1,0 +1,16 @@
+<div id="dashboard-side-nav" class="">
+  <hr>
+  <div class="media profile">
+    <img class="d-flex align-self-center mr-3 profile-pic" src="/assets/ui/src/man.svg" alt="Generic placeholder image">
+    <div class="media-body">
+      <h5 class="mt-0 profile-title">Alexi Nasra</h5>
+      <small  class="profile-details">alexinasra@gmail.com</small>
+      <small>{{time}}</small>
+      <button type="button" class="btn btn-warning" (click)="logout()">logout</button>
+    </div>
+  </div>
+  <hr>
+  <div class="navigations">
+    <ng-content></ng-content>
+  </div>
+</div>

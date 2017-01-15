@@ -1,0 +1,65 @@
+@mixin rtl {
+  html[dir = "rtl"] &{
+    @content;
+  }
+}
+@mixin ltr {
+  html:not([dir = "rtl"]) &{
+    @content;
+  }
+}
+
+@mixin padding-left($pad:auto) {
+  @include ltr {
+    padding-left: $pad !important;
+  }
+  @include rtl {
+    padding-right: $pad !important;
+  }
+}
+
+@mixin padding-right($pad:auto) {
+  @include ltr {
+    padding-right: $pad !important;
+  }
+  @include rtl {
+    padding-left: $pad !important;
+  }
+}
+
+@mixin margin-left($pad:auto) {
+  @include ltr {
+    margin-left: $pad !important;
+  }
+  @include rtl {
+    margin-right: $pad !important;
+  }
+}
+
+@mixin margin-right($pad:auto) {
+  @include ltr {
+    margin-right: $pad !important;
+  }
+  @include rtl {
+    margin-left: $pad !important;
+  }
+}
+
+
+@mixin left($pad:auto) {
+  @include ltr {
+    left: $pad !important;
+  }
+  @include rtl {
+    right: $pad !important;
+  }
+}
+
+@mixin right($pad:auto) {
+  @include ltr {
+    right: $pad !important;
+  }
+  @include rtl {
+    left: $pad !important;
+  }
+}

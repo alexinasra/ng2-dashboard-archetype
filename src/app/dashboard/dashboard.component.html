@@ -1,0 +1,42 @@
+
+<div id="dashboard-container">
+<app-dashboard-navbar [title]="title"></app-dashboard-navbar>
+<app-dashboard-sidebar>
+  <ul class="nav flex-column  align-items-stretch">
+    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a class="nav-link" routerLink="/dashboard">
+        <i class="app-icon nav-link-icon">dashboard</i>
+        <span class="nav-link-text">Dashboard</span>
+      </a>
+    </li>
+    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a class="nav-link" routerLink="/dashboard/profile">
+        <i class="app-icon nav-link-icon">account_box</i>
+        <span class="nav-link-text">My Account</span>
+      </a>
+    </li>
+    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a class="nav-link" routerLink="/dashboard/restaurants">
+        <i class="app-icon nav-link-icon">restaurant</i>
+        <span class="nav-link-text">Restaurants</span>
+      </a>
+    </li>
+    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a class="nav-link" routerLink="/dashboard/settings">
+        <i class="app-icon nav-link-icon">settings</i>
+        <span class="nav-link-text">Settings</span>
+      </a>
+    </li>
+    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a class="nav-link" routerLink="/dashboard/empty">
+        <i class="app-icon nav-link-icon">dashboard</i>
+        <span class="nav-link-text">Empty Page</span>
+      </a>
+    </li>
+  </ul>
+</app-dashboard-sidebar>
+<app-dashboard-page>
+  <router-outlet>
+  </router-outlet>
+  </app-dashboard-page>
+</div>

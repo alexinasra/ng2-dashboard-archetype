@@ -1,0 +1,70 @@
+//
+// Border
+//
+
+.border-0        { border: 0 !important; }
+.border-top-0    { border-top: 0 !important; }
+.border-bottom-0 { border-bottom: 0 !important; }
+.border-right-0  {
+  @include ltr{
+    border-right: 0 !important;
+  }
+  @include rtl{
+    border-left: 0 !important;
+  }
+}
+.border-left-0   {
+  @include ltr{
+    border-left: 0 !important;
+  }
+  @include rtl{
+    border-right: 0 !important;
+  }
+}
+.border-1        { border: 1px solid !important; }
+.border-top-1    { border-top: 1px solid !important; }
+.border-bottom-1 { border-bottom: 1px solid !important; }
+.border-right-1  {
+  @include ltr{
+    border-right: 1px solid !important;
+  }
+  @include rtl{
+    border-left: 1px solid !important;
+  }
+}
+.border-left-1   {
+  @include ltr{
+    border-left: 1px solid !important;
+  }
+  @include rtl{
+    border-right: 1px solid !important;
+  }
+}
+
+//
+// Border-radius
+//
+
+.rounded {
+  @include border-radius($border-radius);
+}
+.rounded-top {
+  @include border-top-radius($border-radius);
+}
+.rounded-right {
+  @include border-right-radius($border-radius);
+}
+.rounded-bottom {
+  @include border-bottom-radius($border-radius);
+}
+.rounded-left {
+  @include border-left-radius($border-radius);
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+.rounded-0 {
+  border-radius: 0;
+}

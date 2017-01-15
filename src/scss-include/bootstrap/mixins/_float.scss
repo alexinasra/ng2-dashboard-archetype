@@ -1,0 +1,21 @@
+@mixin float-left {
+  @include ltr {
+    float: left !important;
+  }
+  @include rtl {
+    float: right !important;
+  }
+}
+
+@mixin float-right {
+  @include ltr {
+    float: right !important;
+  }
+  @include rtl {
+    float: left !important;
+  }
+}
+
+@mixin float-none {
+  float: none !important;
+}
