@@ -1,14 +1,14 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
+import { APP_BASE_HREF } from '@angular/common';
 import { AppComponent } from './app.component';
-
+import { AppModule } from './app.module';
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
+      imports: [ AppModule ],
+      providers: [{provide: APP_BASE_HREF, useValue : '/' }]
     });
     TestBed.compileComponents();
   });

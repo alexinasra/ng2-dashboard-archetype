@@ -2,10 +2,13 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
-
-import { AuthenticateService } from '../authenticate.service';
+import { APP_BASE_HREF } from '@angular/common';
+import { Router, ActivatedRoute } from '@angular/router';
 import { AuthenticationComponent } from './authentication.component';
-import { LoginForm } from '../login-form/login-form.component';
+import { AuthenticationModule } from '../authentication.module';
+import { RouterTestingModule } form '@angular/router/testing';
+class MockRouter { };
+class MockActivatedRoute { }
 
 describe('AuthenticationComponent', () => {
   let component: AuthenticationComponent;
@@ -13,9 +16,14 @@ describe('AuthenticationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [],
-      declarations: [ AuthenticationComponent, LoginForm ],
-      providers: [ AuthenticateService ]
+      imports: [
+        AuthenticationModule
+      ],
+      providers: [
+        provide(Router, { useClass: MockRouter }),
+        provide(ActivatedRoute, { useClass: MockActivatedRoute }),
+        {provide: APP_BASE_HREF, useValue : '/' }
+      ]
     })
     .compileComponents();
   }));

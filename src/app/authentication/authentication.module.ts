@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
@@ -37,7 +36,6 @@ export class AuthenticationRoutingModule {};
   imports: [
     CommonModule,
     CommonImportsModule,
-    HttpModule,
     FormsModule,
     AuthenticationRoutingModule
   ],
