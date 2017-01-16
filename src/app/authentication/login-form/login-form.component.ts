@@ -2,7 +2,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 import { AuthenticateService } from '../authenticate.service';
 import { Credential } from '../credential';
-import { AuthenticationResponse } from '../authentication-response';
+import { BackendResponse } from '../../core';
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
@@ -15,7 +15,7 @@ export class LoginFormComponent implements OnInit {
   @Output()
   onSuccess:EventEmitter<any> = new EventEmitter();
   @Output()
-  onFailure:EventEmitter<AuthenticationResponse> = new EventEmitter();
+  onFailure:EventEmitter<BackendResponse> = new EventEmitter();
   @Output()
   onError:EventEmitter<any> = new EventEmitter();
   constructor(private auth: AuthenticateService) { }
@@ -27,10 +27,10 @@ export class LoginFormComponent implements OnInit {
     this.auth.login({id:event.value.identity, password: event.value.password})
       .subscribe(
         response => {
-          if((<AuthenticationResponse>response).code ==='LOGIN_SUCCESS') {
+          if(response.code ==='LOGIN_SUCCESS') {
             this.onSuccess.emit(null);
           } else {
-            this.onFailure.emit( (<AuthenticationResponse>response) );
+            this.onFailure.emit(response);
           }
         },
         err =>{
