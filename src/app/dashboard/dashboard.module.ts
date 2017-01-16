@@ -13,9 +13,7 @@ import { DashboardLayoutModule } from './dashboard-layout/dashboard-layout.modul
 import { DashboardComponent } from './dashboard.component';
 import { IndexComponent } from './index/index.component';
 import { EmptyPageComponent } from './empty-page/empty-page.component';
-import { ProfileComponent } from './profile/profile.component';
 import { SettingsComponent } from './settings/settings.component';
-import { RestaurantsComponent } from './restaurants/restaurants.component';
 
 const exportedComponents = [
   IndexComponent,
@@ -46,38 +44,12 @@ const DashboardRoutes = [
         path:'',
         component: DashboardComponent,
         data: {
-          title: 'Edit Profile'
-        },
-        children:[
-          {
-            path:'profile',
-            component:ProfileComponent
-          }
-        ]
-      },
-      {
-        path:'',
-        component: DashboardComponent,
-        data: {
           title: 'Settings'
         },
         children:[
           {
             path:'settings',
             component:SettingsComponent
-          }
-        ]
-      },
-      {
-        path:'',
-        component: DashboardComponent,
-        data: {
-          title: 'Restaurants'
-        },
-        children:[
-          {
-            path:'restaurants',
-            component:RestaurantsComponent
           }
         ]
       },
@@ -121,9 +93,7 @@ export class DashboardRoutingModule {};
   ],
   declarations: [
     exportedComponents,
-    ProfileComponent,
     SettingsComponent,
-    RestaurantsComponent
   ],
   exports: [
     exportedComponents

@@ -4,14 +4,14 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { EmptyPageComponent } from './empty-page.component';
-
+import { DashboardModule } from '../dashboard.module';
 describe('EmptyPageComponent', () => {
   let component: EmptyPageComponent;
   let fixture: ComponentFixture<EmptyPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EmptyPageComponent ]
+      imports: [ DashboardModule ]
     })
     .compileComponents();
   }));

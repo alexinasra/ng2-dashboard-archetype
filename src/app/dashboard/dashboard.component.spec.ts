@@ -5,13 +5,14 @@ import { DebugElement } from '@angular/core';
 
 import { DashboardComponent } from './dashboard.component';
 
+import { DashboardModule } from './dashboard.module';
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
   let fixture: ComponentFixture<DashboardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DashboardComponent ]
+      imports: ['DashboardModule']
     })
     .compileComponents();
   }));

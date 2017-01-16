@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { DashboardNavbarComponent } from './dashboard-navbar.component';
+import { DashboardLayoutModule } from '../dashboard-layout.module';
 
 describe('DashboardNavbarComponent', () => {
   let component: DashboardNavbarComponent;
@@ -11,7 +12,7 @@ describe('DashboardNavbarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DashboardNavbarComponent ]
+      imports: [ DashboardLayoutModule ]
     })
     .compileComponents();
   }));
