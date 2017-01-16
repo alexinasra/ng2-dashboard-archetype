@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { IndexComponent } from './index.component';
+import { DashboardModule } from '../dashboard.module';
 
 describe('IndexComponent', () => {
   let component: IndexComponent;
@@ -11,7 +12,7 @@ describe('IndexComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IndexComponent ]
+      imports: [ DashboardModule ]
     })
     .compileComponents();
   }));

@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
 import { Credential } from './credential';
 import { AuthenticationResponse } from './authentication-response';
 import { AuthenticationStatus } from './authentication-status';
@@ -10,9 +9,9 @@ export class AuthenticateService {
 
   private _status: AuthenticationStatus = {
     account: undefined
-  };
+  }; 
 
-  constructor(private http:Http) { }
+  constructor() { }
 
   login (credential:Credential): Rx.Observable<AuthenticationResponse> {
     return new Rx.Observable<AuthenticationResponse>(observer => {

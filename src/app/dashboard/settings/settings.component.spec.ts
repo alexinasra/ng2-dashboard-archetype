@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { SettingsComponent } from './settings.component';
+import { DashboardModule } from '../dashboard.module';
 
 describe('SettingsComponent', () => {
   let component: SettingsComponent;
@@ -11,7 +12,7 @@ describe('SettingsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SettingsComponent ]
+      imports: [ DashboardModule ]
     })
     .compileComponents();
   }));
