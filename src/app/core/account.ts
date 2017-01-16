@@ -3,7 +3,7 @@ import { User } from './user';
 import { Role } from './role';
 
 export interface Account {
-  credetial: Credential;
+  credential: Credential;
   user: User;
   roles: Array<string | Role>;
 }

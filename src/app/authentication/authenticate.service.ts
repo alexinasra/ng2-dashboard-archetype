@@ -23,15 +23,14 @@ export class AuthenticateService {
           account: {
             credential: {
               id: loginData.id,
-              userId: '333333',
-              aliasTo: null
+              userId: '333333'
             },
             user: {
               id: '333333',
               firstName: "User",
               middleName: "",
               lastName: "Admin",
-              birthdate: "19900101"
+              birthdate: new Date("19900101")
             },
             roles: ['Admin']
           }
