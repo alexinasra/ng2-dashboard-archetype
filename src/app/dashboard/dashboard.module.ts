@@ -14,7 +14,7 @@ import { DashboardComponent } from './dashboard.component';
 import { IndexComponent } from './index/index.component';
 import { EmptyPageComponent } from './empty-page/empty-page.component';
 import { SettingsComponent } from './settings/settings.component';
-
+import { LanguageSelectComponent } from './settings/language-select/language-select.component';
 const exportedComponents = [
   IndexComponent,
   DashboardComponent,
@@ -94,6 +94,7 @@ export class DashboardRoutingModule {};
   declarations: [
     exportedComponents,
     SettingsComponent,
+    LanguageSelectComponent
   ],
   exports: [
     exportedComponents

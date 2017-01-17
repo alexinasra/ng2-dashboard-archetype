@@ -1,0 +1,11 @@
+<form #LanguageSelect="ngForm" (ngSubmit)="onSubmit(LanguageSelect)">
+  <div class="input-group">
+    <select id="lang" name="lang" [ngModel]="selectedLanguage" class="custom-select form-control" >
+      <option value="en">English</option>
+      <option value="ar">Arabic</option>
+    </select>
+    <span class="input-group-btn">
+      <button type="submit" class="btn btn-secondary">Select</button>
+    </span>
+  </div>
+</form>
