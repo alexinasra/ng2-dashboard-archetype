@@ -143,11 +143,12 @@
   line-height: $custom-select-line-height;
   color: $custom-select-color;
   vertical-align: middle;
+  background: $custom-select-bg $custom-select-indicator no-repeat;
   @include ltr {
-    background: $custom-select-bg $custom-select-indicator no-repeat right $custom-select-padding-x center;
+    background-position: right $custom-select-padding-x center;
   }
   @include rtl {
-    background: $custom-select-bg $custom-select-indicator no-repeat left $custom-select-padding-x center;
+    background-position: left $custom-select-padding-x center;
   }
   background-size: $custom-select-bg-size;
   border: $custom-select-border-width solid $custom-select-border-color;
