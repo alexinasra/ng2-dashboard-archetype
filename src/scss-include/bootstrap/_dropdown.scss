@@ -46,10 +46,10 @@
   margin: $dropdown-margin-top 0 0; // override default ul
   font-size: $font-size-base; // Redeclare because nesting can cause inheritance issues
   color: $body-color;
-  @include ltr{
+  @include ltr {
     text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   }
-  @include rtl{
+  @include rtl {
     text-align: right; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   }
   list-style: none;

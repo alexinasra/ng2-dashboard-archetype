@@ -23,7 +23,7 @@
 
 @mixin gradient-directional($start-color: #555, $end-color: #333, $deg: 45deg) {
   background-repeat: repeat-x;
-  @include ltr{
+  @include ltr {
     background-image: linear-gradient($deg, $start-color, $end-color);
   }
   @include  rtl {
@@ -31,7 +31,7 @@
   }
 }
 @mixin gradient-x-three-colors($start-color: #00b3ee, $mid-color: #7a43b6, $color-stop: 50%, $end-color: #c3325f) {
-  @include ltr{
+  @include ltr {
     background-image: linear-gradient(to right, $start-color, $mid-color $color-stop, $end-color);
   }
   @include  rtl {
@@ -48,7 +48,7 @@
   background-repeat: no-repeat;
 }
 @mixin gradient-striped($color: rgba(255,255,255,.15), $angle: 45deg) {
-  @include ltr{
+  @include ltr {
     background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
   }
   @include  rtl {

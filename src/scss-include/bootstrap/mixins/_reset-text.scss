@@ -6,10 +6,10 @@
   letter-spacing: normal;
   line-break: auto;
   line-height: $line-height-base;
-  @include ltr{
+  @include ltr {
   text-align: left; // Fallback for where `start` is not supported
   }
-  @include rtl{
+  @include rtl {
   text-align: right; // Fallback for where `start` is not supported
   }
   text-align: start;

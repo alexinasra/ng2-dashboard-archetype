@@ -15,7 +15,7 @@
 
 @mixin border-right-radius($radius) {
   @if $enable-rounded {
-    @include ltr{
+    @include ltr {
       border-bottom-right-radius: $radius;
       border-top-right-radius: $radius;
     }
@@ -35,7 +35,7 @@
 
 @mixin border-left-radius($radius) {
   @if $enable-rounded {
-    @include ltr{
+    @include ltr {
       border-bottom-left-radius: $radius;
       border-top-left-radius: $radius;
     }

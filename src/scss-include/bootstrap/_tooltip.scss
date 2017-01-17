@@ -21,7 +21,7 @@
     .tooltip-inner::before {
       bottom: 0;
       @include left(50%);
-      @include margin-left(-$tooltip-arrow-width);
+      @include margin-left($tooltip-arrow-width);
       content: "";
       border-width: $tooltip-arrow-width $tooltip-arrow-width 0;
       border-top-color: $tooltip-arrow-color;
@@ -30,18 +30,19 @@
   &.tooltip-right,
   &.bs-tether-element-attached-left {
     padding: 0 $tooltip-arrow-width;
-    @include margin-left($tooltip-margin);
 
+    @include margin-left($tooltip-margin);
     .tooltip-inner::before {
       top: 50%;
       @include left(0);
       margin-top: -$tooltip-arrow-width;
       content: "";
-      border-width: $tooltip-arrow-width $tooltip-arrow-width $tooltip-arrow-width 0;
       @include ltr {
+        border-width: $tooltip-arrow-width $tooltip-arrow-width $tooltip-arrow-width 0;
         border-right-color: $tooltip-arrow-color;
       }
       @include rtl {
+        border-width: $tooltip-arrow-width 0 $tooltip-arrow-width $tooltip-arrow-width;
         border-left-color: $tooltip-arrow-color;
       }
     }
@@ -70,11 +71,12 @@
       @include right(0);
       margin-top: -$tooltip-arrow-width;
       content: "";
-      border-width: $tooltip-arrow-width 0 $tooltip-arrow-width $tooltip-arrow-width;
       @include ltr {
+        border-width: $tooltip-arrow-width 0 $tooltip-arrow-width $tooltip-arrow-width;
         border-left-color: $tooltip-arrow-color;
       }
       @include rtl {
+        border-width: $tooltip-arrow-width $tooltip-arrow-width $tooltip-arrow-width 0;
         border-right-color: $tooltip-arrow-color;
       }
     }

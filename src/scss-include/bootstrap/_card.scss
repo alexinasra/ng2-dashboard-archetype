@@ -154,10 +154,10 @@
 .card-blockquote {
   padding: 0;
   margin-bottom: 0;
-  @include ltr{
+  @include ltr {
     border-left: 0;
   }
-  @include rtl{
+  @include rtl {
     border-right: 0;
   }
 }
@@ -242,18 +242,18 @@
           @include border-left-radius(0);
 
           .card-img-top {
-            @include ltr{
+            @include ltr {
               border-top-left-radius: 0;
             }
-            @include rtl{
+            @include rtl {
               border-top-right-radius: 0;
             }
           }
           .card-img-bottom {
-            @include ltr{
+            @include ltr {
               border-bottom-left-radius: 0;
             }
-            @include rtl{
+            @include rtl {
               border-bottom-right-radius: 0;
             }
           }

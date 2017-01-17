@@ -6,6 +6,7 @@
 
 // Table of Contents
 //
+// Context Direction
 // Colors
 // Options
 // Spacing
@@ -86,6 +87,15 @@
 //
 // Variable format should follow the `$component-modifier-state-property` order.
 
+
+// Context direction
+// chosse between rtl or ltr support or both as bidrectional library .
+// to switch between context direction through html[dir] attributes .
+// setting it to RTL mirros all positions from left to right without changing
+// classes names for examle .float-left will float to right and viceversa .
+$context-direction: "both" !default;
+//$context-direction:  "ltr" //for default ltr bootstrap ';
+//$context-direction:  "rtl" //for rtl bootstrap
 
 // Colors
 //

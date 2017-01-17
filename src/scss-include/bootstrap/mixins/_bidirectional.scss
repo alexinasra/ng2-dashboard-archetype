@@ -1,10 +1,25 @@
+@if $context-direction == "rtl" {
+  html {
+    direction: rtl !important;
+  }
+}
 @mixin rtl {
-  html[dir = "rtl"] &{
+  @if $context-direction == "both" {
+    html[dir = "rtl"] & {
+      @content;
+    }
+  }
+  @else if $context-direction =="rtl" {
     @content;
   }
 }
 @mixin ltr {
-  html:not([dir = "rtl"]) &{
+  @if $context-direction == "both" {
+    html:not([dir = "rtl"]) & {
+      @content;
+    }
+  }
+  @else if $context-direction == "ltr" or $context-direction != "rtl" {
     @content;
   }
 }

@@ -114,10 +114,10 @@
   @include border-right-radius(0);
 }
 .input-group-addon:not(:last-child) {
-  @include ltr{
+  @include ltr {
     border-right: 0;
   }
-  @include rtl{
+  @include rtl {
     border-left: 0;
   }
 }
@@ -131,10 +131,10 @@
   @include border-left-radius(0);
 }
 .form-control + .input-group-addon:not(:first-child) {
-  @include ltr{
+  @include ltr {
     border-left: 0;
   }
-  @include rtl{
+  @include rtl {
     border-right: 0;
   }
 }

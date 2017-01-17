@@ -97,10 +97,21 @@
   background-size: 100% 100%;
 }
 .carousel-control-prev-icon {
-  background-image: $carousel-control-prev-icon-bg;
+  @include ltr {
+    background-image: $carousel-control-prev-icon-bg;
+  }
+  @include rtl {
+    background-image: $carousel-control-next-icon-bg;
+  }
+
 }
 .carousel-control-next-icon {
-  background-image: $carousel-control-next-icon-bg;
+  @include ltr {
+    background-image: $carousel-control-next-icon-bg;
+  }
+  @include rtl {
+    background-image: $carousel-control-prev-icon-bg;
+  }
 }
 
 
@@ -113,7 +124,7 @@
   position: absolute;
   right: 0;
   bottom: 10px;
-  @include left(0);
+  left: 0;
   z-index: 15;
   display: flex;
   justify-content: center;

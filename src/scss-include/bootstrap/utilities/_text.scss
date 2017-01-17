@@ -15,18 +15,18 @@
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
     .text#{$infix}-left   {
-      @include ltr{
+      @include ltr {
         text-align: left !important;
       }
-      @include rtl{
+      @include rtl {
         text-align: right !important;
       }
     }
     .text#{$infix}-right  {
-      @include ltr{
+      @include ltr {
         text-align: right !important;
       }
-      @include rtl{
+      @include rtl {
         text-align: left !important;
       }
     }

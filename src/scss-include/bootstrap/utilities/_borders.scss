@@ -6,18 +6,18 @@
 .border-top-0    { border-top: 0 !important; }
 .border-bottom-0 { border-bottom: 0 !important; }
 .border-right-0  {
-  @include ltr{
+  @include ltr {
     border-right: 0 !important;
   }
-  @include rtl{
+  @include rtl {
     border-left: 0 !important;
   }
 }
 .border-left-0   {
-  @include ltr{
+  @include ltr {
     border-left: 0 !important;
   }
-  @include rtl{
+  @include rtl {
     border-right: 0 !important;
   }
 }
@@ -25,18 +25,18 @@
 .border-top-1    { border-top: 1px solid !important; }
 .border-bottom-1 { border-bottom: 1px solid !important; }
 .border-right-1  {
-  @include ltr{
+  @include ltr {
     border-right: 1px solid !important;
   }
-  @include rtl{
+  @include rtl {
     border-left: 1px solid !important;
   }
 }
 .border-left-1   {
-  @include ltr{
+  @include ltr {
     border-left: 1px solid !important;
   }
-  @include rtl{
+  @include rtl {
     border-right: 1px solid !important;
   }
 }
